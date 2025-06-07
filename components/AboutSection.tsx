@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from './Section';
+import profileImage from '../assets/profile.jpg';
 
 interface AboutSectionProps {
   id: string;
@@ -12,7 +13,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id, title, content }) => {
     <Section id={id} title={title} className="bg-[#1A1A24]"> {/* Updated background color */}
       <div className="text-center max-w-3xl mx-auto">
         <img
-          src="assets/profile.jpg" // Updated image path
+          src= profileImage // Updated image path
           alt="Profile"
           className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-8 shadow-xl border-4 border-[#00F0FF]" /* Updated border color */
         />
