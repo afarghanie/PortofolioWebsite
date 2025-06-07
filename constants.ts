@@ -13,8 +13,8 @@ export const PROJECTS_DATA: Project[] = [
     title: 'TOPSIS Decision Support System',
     description: 'An e-commerce platform for classic video games and consoles, featuring a nostalgic pixel-art design and real-time inventory updates.',
     imageUrl: 'https://picsum.photos/seed/project1/600/400',
-    techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL'],
-    repoUrl: 'https://github.com/yourusername/retro-game-emporium',
+    techStack: ['TypeScript','PostgreSQL'],
+    repoUrl: 'https://github.com/afarghanie/TOPSIS_APPLICATION',
     liveUrl: '#',
   },
   {
@@ -22,8 +22,8 @@ export const PROJECTS_DATA: Project[] = [
     title: 'RAG Chat Bot',
     description: 'A web-based application that allows users to create synthwave tracks using a virtual synthesizer and drum machine.',
     imageUrl: 'https://picsum.photos/seed/project2/600/400',
-    techStack: ['Vue.js', 'Web Audio API', 'Firebase', 'Tailwind CSS'],
-    repoUrl: 'https://github.com/yourusername/synthwave-beat-maker',
+    techStack: ['Python', 'Streamlit', 'Typescript', 'ChromaDB'],
+    repoUrl: 'https://github.com/afarghanie/RAG_CHATBOT',
   },
   {
     id: 'project-3',
