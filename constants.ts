@@ -1,5 +1,8 @@
 
 import { Project, NavLink, SocialLink } from './types';
+import TOPSIS from '../assets/topsis.png'; 
+import SEO from '../assets/seo.png';
+
 
 export const NAV_LINKS: NavLink[] = [
   { href: '#about', label: 'About' },
@@ -10,7 +13,7 @@ export const NAV_LINKS: NavLink[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: 'project-1',
-    title: 'TOPSIS Decision Support System',
+    title: TOPSIS,
     description: 'An e-commerce platform for classic video games and consoles, featuring a nostalgic pixel-art design and real-time inventory updates.',
     imageUrl: 'https://picsum.photos/seed/project1/600/400',
     techStack: ['TypeScript','PostgreSQL'],
@@ -36,11 +39,11 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: 'project-4',
-    title: '8-Bit Weather App',
+    title: 'Seo-Metadata-Analyzer',
     description: 'A weather application with a charming 8-bit retro interface, providing current weather and forecasts using a public weather API.',
-    imageUrl: 'https://picsum.photos/seed/project4/600/400',
-    techStack: ['JavaScript', 'HTML', 'CSS', 'OpenWeatherMap API'],
-    repoUrl: 'https://github.com/yourusername/8bit-weather-app',
+    imageUrl: SEO,
+    techStack: ['TypeScript', 'Tailwind CSS', 'ShadCn'],
+    repoUrl: 'https://github.com/afarghanie/Seo-Metadata-Analyzer',
   },
 ];
 
