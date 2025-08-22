@@ -1,7 +1,6 @@
-
 import { Project, NavLink, SocialLink } from './types';
-import TOPSIS from '../assets/topsis.png'; 
-import SEO from '../assets/seo.png';
+import Topsis from './assets/topsis.png';
+import SEO from './assets/seo.png';
 
 
 export const NAV_LINKS: NavLink[] = [
@@ -13,27 +12,27 @@ export const NAV_LINKS: NavLink[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: 'project-1',
-    title: TOPSIS,
+    title: 'TOPSIS Decision Support System',
     description: 'An e-commerce platform for classic video games and consoles, featuring a nostalgic pixel-art design and real-time inventory updates.',
-    imageUrl: 'https://picsum.photos/seed/project1/600/400',
+    imageUrl: Topsis,
     techStack: ['TypeScript','PostgreSQL'],
     repoUrl: 'https://github.com/afarghanie/TOPSIS_APPLICATION',
     liveUrl: '#',
   },
   {
     id: 'project-2',
-    title: 'RAG Chat Bot',
-    description: 'A web-based application that allows users to create synthwave tracks using a virtual synthesizer and drum machine.',
+    title: 'Dynamic Web Crawler',
+    description: 'A web crawler that can crawl a website and extract the data from the website build on top of Crawl4ai library.',
     imageUrl: 'https://picsum.photos/seed/project2/600/400',
-    techStack: ['Python', 'Streamlit', 'Typescript', 'ChromaDB'],
-    repoUrl: 'https://github.com/afarghanie/RAG_CHATBOT',
+    techStack: ['Python', 'Streamlit', 'FastApi', 'Crawl4ai'],
+    repoUrl: 'https://github.com/afarghanie/Intention-Driven-Web-Scraper',
   },
   {
     id: 'project-3',
-    title: 'Podomoro Timer Website',
-    description: 'A custom Content Management System designed for artists to easily update and showcase their pixel art portfolios.',
+    title: 'Human Resource Management System',
+    description: 'Developed a modern HR platform with React and Supabase to centralize employee data, automate key administrative tasks, and provide role-based access for employees, managers, and HR personnel.',
     imageUrl: 'https://picsum.photos/seed/project3/600/400',
-    techStack: ['Next.js', 'GraphQL', 'Strapi', 'Material UI'],
+    techStack: ['Tailwind CSS', 'TypeScript', 'ShadCn', 'Supabase'],
     repoUrl: 'https://github.com/yourusername/pixel-portfolio-cms',
     liveUrl: '#',
   },
