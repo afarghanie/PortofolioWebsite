@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Header from './components/Header';
+import HomeSection from './components/HomeSection';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
@@ -12,6 +13,7 @@ const App: React.FC = () => {
     <div className="bg-white text-slate-900 min-h-screen font-sans flex flex-col">
       <Header navLinks={NAV_LINKS} />
       <main className="flex-grow">
+        <HomeSection id="home" name="Alavie" title="Web Developer" socialLinks={SOCIAL_LINKS_DATA} imageUrl={"/assets/removebg.png"} />
         <AboutSection id="about" title="About Me" content={ABOUT_ME_TEXT} />
         <ProjectsSection id="projects" title="My Projects" projects={PROJECTS_DATA} />
         <ContactSection id="contact" title="Get In Touch" socialLinks={SOCIAL_LINKS_DATA} />

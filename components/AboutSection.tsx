@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from './Section';
-import profileImage from '../assets/profile.jpg';
+import profileImage from '../assets/og.jpg';
 
 interface AboutSectionProps {
   id: string;
@@ -10,16 +10,19 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ id, title, content }) => {
   return (
-    <Section id={id} title={title} className="bg-white">
-      <div className="text-center max-w-3xl mx-auto">
+    <Section id={id} title={title} className="bg-white" titleClassName="text-[#2563eb] text-left">
+      <div className="grid grid-cols-1 md:grid-cols-[360px,1fr] gap-10 items-center">
         <img
-          src= {profileImage}  // Updated image path
-          alt="Profile"
-          className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-8 shadow-xl border-4 border-[#2563eb]"
+          src={profileImage}
+          alt="Profile photo"
+          className="w-full h-[420px] object-cover rounded-lg shadow-md"
         />
-        <p className="text-lg md:text-xl leading-relaxed text-slate-600 text-justify">
-          {content}
-        </p>
+        <div>
+          <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">I'm Alavie</h3>
+          <p className="text-base md:text-lg leading-relaxed text-slate-600">
+            {content}
+          </p>
+        </div>
       </div>
     </Section>
   );

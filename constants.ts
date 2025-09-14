@@ -4,6 +4,7 @@ import SEO from './assets/seo.png';
 
 
 export const NAV_LINKS: NavLink[] = [
+  { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
