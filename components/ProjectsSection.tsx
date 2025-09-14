@@ -12,7 +12,7 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ id, title, projects }) => {
   return (
-    <Section id={id} title={title} className="bg-[#101018]"> {/* Updated background color */}
+    <Section id={id} title={title} className="bg-white">
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-10">
           {projects.map((project) => (
@@ -20,7 +20,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ id, title, projects }
           ))}
         </div>
       ) : (
-        <p className="text-center text-lg text-[#A0A0CC]">No projects to display yet. Check back soon!</p> /* Updated text color */
+        <p className="text-center text-lg text-slate-600">No projects to display yet. Check back soon!</p>
       )}
     </Section>
   );

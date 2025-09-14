@@ -9,7 +9,7 @@ import { NAV_LINKS, PROJECTS_DATA, SOCIAL_LINKS_DATA, ABOUT_ME_TEXT } from './co
 
 const App: React.FC = () => {
   return (
-    <div className="bg-[#101018] text-[#E0E0FF] min-h-screen font-sans flex flex-col"> {/* Updated colors */}
+    <div className="bg-white text-slate-900 min-h-screen font-sans flex flex-col">
       <Header navLinks={NAV_LINKS} />
       <main className="flex-grow">
         <AboutSection id="about" title="About Me" content={ABOUT_ME_TEXT} />

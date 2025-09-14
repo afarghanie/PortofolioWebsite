@@ -10,14 +10,14 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ id, title, content }) => {
   return (
-    <Section id={id} title={title} className="bg-[#1A1A24]"> {/* Updated background color */}
+    <Section id={id} title={title} className="bg-white">
       <div className="text-center max-w-3xl mx-auto">
         <img
           src= {profileImage}  // Updated image path
           alt="Profile"
-          className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-8 shadow-xl border-4 border-[#00F0FF]" /* Updated border color */
+          className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-8 shadow-xl border-4 border-[#2563eb]"
         />
-        <p className="text-lg md:text-xl leading-relaxed text-[#A0A0CC] text-justify"> {/* Updated text color and added text-justify */}
+        <p className="text-lg md:text-xl leading-relaxed text-slate-600 text-justify">
           {content}
         </p>
       </div>

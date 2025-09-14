@@ -15,7 +15,7 @@ const Section: React.FC<SectionProps> = ({
   title, 
   children, 
   className = '', 
-  titleClassName = 'text-[#F3E600]', /* Updated default title color */
+  titleClassName = 'text-[#2563eb]',
   contentClassName = '' 
 }) => {
   return (
