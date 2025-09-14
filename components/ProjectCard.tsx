@@ -1,13 +1,39 @@
 
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { Project } from '../types';
 import Icon from './Icon'; // Assuming Icon component can render a generic link icon or you use text
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const images: string[] = useMemo(() => {
+    if (project.imageUrls && project.imageUrls.length > 0) return project.imageUrls;
+    if (project.imageUrl) return [project.imageUrl];
+    return [];
+  }, [project.imageUrls, project.imageUrl]);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const hasMultiple = images.length > 1;
+
+  const goPrev = () => setActiveIndex((i) => (i - 1 + images.length) % images.length);
+  const goNext = () => setActiveIndex((i) => (i + 1) % images.length);
+
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg border border-slate-200 flex flex-col">
-      {project.imageUrl && (
-        <img src={project.imageUrl} alt={project.title} className="w-full h-56 object-cover" />
+      {images.length > 0 && (
+        <div className="relative w-full h-56">
+          <img src={images[activeIndex]} alt={project.title} className="w-full h-56 object-cover" />
+          {hasMultiple && (
+            <>
+              <button aria-label="Previous image" onClick={goPrev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 rounded-full p-1 shadow">‹</button>
+              <button aria-label="Next image" onClick={goNext} className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 rounded-full p-1 shadow">›</button>
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                {images.map((_, idx) => (
+                  <span key={idx} className={`h-1.5 w-1.5 rounded-full ${idx === activeIndex ? 'bg-white' : 'bg-white/60'}`} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
       )}
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-2xl font-semibold text-slate-900 mb-3">{project.title}</h3>

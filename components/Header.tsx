@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ navLinks }) => {
 
   return (
     <header className="bg-white text-slate-900 border-b border-slate-200 shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand Name */}
           <a href="#" className="text-2xl font-semibold tracking-tight hover:text-[#2563eb] transition-colors">

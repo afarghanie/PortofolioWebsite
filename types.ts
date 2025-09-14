@@ -3,7 +3,8 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl?: string; // Optional image for the project
+  imageUrl?: string; // Deprecated: prefer imageUrls
+  imageUrls?: string[]; // Optional multiple images for the project
   techStack: string[];
   repoUrl: string;
   liveUrl?: string; // Optional live demo link

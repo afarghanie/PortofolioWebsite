@@ -10,7 +10,7 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ id, title, content }) => {
   return (
-    <Section id={id} title={title} className="bg-white" titleClassName="text-[#2563eb] text-left">
+    <Section id={id} title={title} className="bg-white" titleClassName="text-[#2563eb]" titleAlign="center">
       <div className="grid grid-cols-1 md:grid-cols-[360px,1fr] gap-10 items-center">
         <img
           src={profileImage}
